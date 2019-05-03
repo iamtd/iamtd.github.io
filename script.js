@@ -4,182 +4,189 @@ function init() {
     playlist = [
         {
             name: 'When the love falls',
-            url: 'https://frzwnd.000webhostapp.com/music/WhenTheLoveFalls-Yiruma.mp3',
+            url: 'music/WhenTheLoveFalls-Yiruma.mp3',
             artist: 'Yiruma',
             bg: 'images/tinhtrecon.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Snow Flower',
-            url: 'https://frzwnd.000webhostapp.com/music/SnowFlower-KimYoon.mp3',
+            url: 'music/SnowFlower-KimYoon.mp3',
             artist: 'Kim Yoon',
             bg: 'images/emhonnhien.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Love',
-            url: 'https://frzwnd.000webhostapp.com/music/Love-WangWei.mp3',
+            url: 'music/Love-WangWei.mp3',
             artist: 'Wang Wei',
             bg: 'images/binhyenlaxanh.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Remember',
-            url: 'https://frzwnd.000webhostapp.com/music/Remember-KimYoon.mp3',
+            url: 'music/Remember-KimYoon.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Bài hát viết cho em',
-            url: 'https://frzwnd.000webhostapp.com/music/BaiHatVietChoEm-PhamHoaiNam.mp3',
+            url: 'music/BaiHatVietChoEm-PhamHoaiNam.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Chỉ còn những mùa nhớ',
-            url: 'https://frzwnd.000webhostapp.com/music/ChiConNhungMuaNho-BaoTram.mp3',
+            url: 'music/ChiConNhungMuaNho-BaoTram.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Chuyện của ta',
-            url: 'https://frzwnd.000webhostapp.com/music/ChuyenCuaTa-GleeGiaThieu.mp3',
+            url: 'music/ChuyenCuaTa-GleeGiaThieu.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Còn tuổi nào cho em',
-            url: 'https://frzwnd.000webhostapp.com/music/ConTuoiNaoChoEm-Miu Le',
+            url: 'music/ConTuoiNaoChoEm-MiuLe.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Đánh rơi bên hồ',
-            url: 'https://frzwnd.000webhostapp.com/music/DanhRoiBenHo-ThuyChi.mp3',
+            url: 'music/DanhRoiBenHo-ThuyChi.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
-            name: 'Đền nhau',
-            url: 'https://frzwnd.000webhostapp.com/music/DenNhau-Hy',
+            name: 'Nhớ mang em về',
+            url: 'music/NhoMangEmVe-Hy.mp3',
+            artist: 'Kim Yoon',
+            bg: 'images/cunvaem.jpg',
+            note: 'Cho những tháng năm thương nhớ người...'
+        },
+        {
+            name: 'Sài gòn vẫn thế',
+            url: 'music/SaiGonVanThe-PhamHoaiNam.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Dream Catcher',
-            url: 'https://frzwnd.000webhostapp.com/music/DreamCatcher-XiaoPing.mp3',
+            url: 'music/DreamCatcher-XiaoPing.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Em vẫn như ngày xưa',
-            url: 'https://frzwnd.000webhostapp.com/music/EmVanNhuNgayXua-ThaiTrinh.mp3',
+            url: 'music/EmVanNhuNgayXua-ThaiTrinh.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Giấc mơ nhẹ nhàng',
-            url: 'https://frzwnd.000webhostapp.com/music/GiacMoNheNhang-ThuyChiFtMinhVuong.mp3',
+            url: 'music/GiacMoNheNhang-ThuyChiFtMinhVuong.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Dona, Dona',
-            url: 'https://frzwnd.000webhostapp.com/music/JoanBaez-DonnaDonna.mp3',
+            url: 'music/JoanBaez-DonnaDonna.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Lớn rồi còn khóc nhè',
-            url: 'https://frzwnd.000webhostapp.com/music/LonRoiConKhocNhe-TrucNhan.mp3',
+            url: 'music/LonRoiConKhocNhe-TrucNhan.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Mong manh tình về',
-            url: 'https://frzwnd.000webhostapp.com/music/MongManhTinhVe-ThuyChi.mp3',
+            url: 'music/MongManhTinhVe-ThuyChi.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Morning Please Don\'t Come',
-            url: 'https://frzwnd.000webhostapp.com/music/MorningPleaseDontCome-WangWei.mp3',
+            url: 'music/MorningPleaseDontCome-WangWei.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Remember',
-            url: 'https://frzwnd.000webhostapp.com/music/Remember-KimYoon.mp3',
+            url: 'music/Remember-KimYoon.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Mùa hoa bỏ lại',
-            url: 'https://frzwnd.000webhostapp.com/music/MuaHoaBoLai-PhamHoaiNam.mp3',
+            url: 'music/MuaHoaBoLai-PhamHoaiNam.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Muộn màng là từ lúc',
-            url: 'https://frzwnd.000webhostapp.com/music/MuonMangLaTuLuc-NguyenHa.mp3',
+            url: 'music/MuonMangLaTuLuc-NguyenHa.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Ta có hẹn với tháng 5',
-            url: 'https://frzwnd.000webhostapp.com/music/TaCoHenVoiThang5-Nguyen Ha.mp3',
+            url: 'music/TaCoHenVoiThang5-Nguyen Ha.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Tháng mười một',
-            url: 'https://frzwnd.000webhostapp.com/music/ThangMuoiMot-Hy.mp3',
+            url: 'music/ThangMuoiMot-Hy.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Tinh cầu cô đơn',
-            url: 'https://frzwnd.000webhostapp.com/music/TinhCauCoDon-PhamHoaiNam.mp3',
+            url: 'music/TinhCauCoDon-PhamHoaiNam.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Tình đầu',
-            url: 'https://frzwnd.000webhostapp.com/music/TinhDau-NguyenHa.mp3',
+            url: 'music/TinhDau-NguyenHa.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Vừa biết dấu yêu',
-            url: 'https://frzwnd.000webhostapp.com/music/VuaBietDauYeu-ThanhTrangNguyen.mp3',
+            url: 'music/VuaBietDauYeu-ThanhTrangNguyen.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Want to be a Pisces',
-            url: 'https://frzwnd.000webhostapp.com/music/WantToBeAPisces-JinShi.mp3',
+            url: 'music/WantToBeAPisces-JinShi.mp3',
             artist: 'Kim Yoon',
             bg: 'images/cunvaem.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
