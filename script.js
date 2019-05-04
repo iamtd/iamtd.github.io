@@ -34,21 +34,21 @@ function init() {
             name: 'Bài hát viết cho em',
             url: 'music/BaiHatVietChoEm-PhamHoaiNam.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/hua.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Chỉ còn những mùa nhớ',
             url: 'music/ChiConNhungMuaNho-BaoTram.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/lavang.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Chuyện của ta',
             url: 'music/ChuyenCuaTa-GleeGiaThieu.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/hua.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -62,7 +62,7 @@ function init() {
             name: 'Đánh rơi bên hồ',
             url: 'music/DanhRoiBenHo-ThuyChi.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/2.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -76,7 +76,7 @@ function init() {
             name: 'Sài gòn vẫn thế',
             url: 'music/SaiGonVanThe-PhamHoaiNam.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/gocsachnangvang.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -90,7 +90,7 @@ function init() {
             name: 'Em vẫn như ngày xưa',
             url: 'music/EmVanNhuNgayXua-ThaiTrinh.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/xam.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -104,7 +104,7 @@ function init() {
             name: 'Dona, Dona',
             url: 'music/JoanBaez-DonnaDonna.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/ngungoan.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -125,7 +125,7 @@ function init() {
             name: 'Morning Please Don\'t Come',
             url: 'music/MorningPleaseDontCome-WangWei.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/1.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -146,7 +146,7 @@ function init() {
             name: 'Muộn màng là từ lúc',
             url: 'music/MuonMangLaTuLuc-NguyenHa.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/1.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -160,35 +160,35 @@ function init() {
             name: 'Tháng mười một',
             url: 'music/ThangMuoiMot-Hy.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/binhyenlaxanh.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Tinh cầu cô đơn',
             url: 'music/TinhCauCoDon-PhamHoaiNam.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/1.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Tình đầu',
             url: 'music/TinhDau-NguyenHa.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/tinhtrecon.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Vừa biết dấu yêu',
             url: 'music/VuaBietDauYeu-ThanhTrangNguyen.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/binhyenlaxanh.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
             name: 'Want to be a Pisces',
             url: 'music/WantToBeAPisces-JinShi.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/honnhien.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         }
     ];
