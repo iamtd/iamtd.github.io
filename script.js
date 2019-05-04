@@ -48,7 +48,7 @@ function init() {
             name: 'Chuyện của ta',
             url: 'music/ChuyenCuaTa-GleeGiaThieu.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/hua.jpg',
+            bg: 'images/4.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -83,7 +83,7 @@ function init() {
             name: 'Dream Catcher',
             url: 'music/DreamCatcher-XiaoPing.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/5.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
@@ -139,7 +139,7 @@ function init() {
             name: 'Mùa hoa bỏ lại',
             url: 'music/MuaHoaBoLai-PhamHoaiNam.mp3',
             artist: 'Kim Yoon',
-            bg: 'images/cunvaem.jpg',
+            bg: 'images/4.jpg',
             note: 'Cho những tháng năm thương nhớ người...'
         },
         {
