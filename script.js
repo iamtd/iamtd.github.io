@@ -1,6 +1,8 @@
 function init() {
     var audio, playlist;
-
+    var ranNum = Math.floor((Math.random() * 2) + 1);
+    alert(ranNum);
+    
     playlist = [
         {
             name: 'When the love falls',
