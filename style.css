@@ -23,6 +23,17 @@ body {
   width: auto;
 }
 
+.btn-play {
+  position: fixed;
+  align-self: center;
+  font-size: 50px;
+  color: #fff;
+  opacity: .8;
+}
+
+.d-none {
+  display: none;
+}
 
 /* TYPE */
 .text {
