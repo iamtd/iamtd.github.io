@@ -88,16 +88,16 @@ function init() {
     playPromise.then(_ => {
       // Automatic playback started!
       // Show playing UI.
-    document.getElementById('btn-play').addEventListener("click", function() {
-        console.log('clicked');
-        switchTrack();
-        document.querySelector('.btn-play').classList.add('d-none');
-    });
     })
     .catch(error => {
       // Auto-play was prevented
       // Show paused UI.
-      // openNav();
+      document.querySelector('.btn-play').classList.remove('d-none');
+      document.getElementById('btn-play').addEventListener("click", function() {
+        console.log('clicked');
+        switchTrack();
+        document.querySelector('.btn-play').classList.add('d-none');
+      });
     });
   }
   
