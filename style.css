@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
   font-family: 'Amatic SC', cursive;
@@ -104,21 +110,24 @@ span.type::after {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0,0,0, 0.7);
   overflow-x: hidden;
   transition: 0.5s;
 }
 
+
+
 .overlay-content {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   width: 100%;
-  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.overlay a {
+/* .overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
@@ -127,37 +136,61 @@ span.type::after {
   transition: 0.3s;
 }
 
-.overlay p {
-  font-size: 20px;
-}
-
 .overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: -25px;
-  right: 10px;
-  font-size: 80px;
-}
+} */
 
 .menu-icon {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 0px;
+  cursor: pointer;
+  font-size: 24px;
+  color: rgb(110, 110, 110);
+  z-index: 999;
 }
+
+.menu-icon:active {
+  transform: scale(.5);
+}
+
+.settings-icons, .settings-icons--off {
+  font-size: 38px;
+  color: rgb(218, 218, 218);
+  margin: 0 10px;
+  z-index: 9;
+  opacity: .9;
+}
+
+.settings-icons--off {
+  color: rgb(85, 85, 85);
+}
+
+.settings {
+}
+
+.copyright {
+  cursor: pointer;
+  z-index: 99;
+  margin-bottom: 4px;
+}
+
+.copyright a {
+  color: rgb(218, 218, 218);
+  text-decoration: none;
+}
+
+
+/* REPONSIVE */
 
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
-  .overlay .closebtn {
+  .overlay {
   font-size: 40px;
   top: 15px;
   right: 35px;
   }
 }
-
-/* REPONSIVE */
 
 @media only screen and (min-width: 992px) {
   .video-background {
@@ -180,3 +213,4 @@ span.type::after {
     font-size: 23px;
   }
 }
+
