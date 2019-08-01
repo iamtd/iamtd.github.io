@@ -1,4 +1,8 @@
 // NAVBAR
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
+
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
   document.getElementById('text').style.display = 'none';

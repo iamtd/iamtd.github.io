@@ -177,7 +177,7 @@ span.type::after {
 .copyright {
   cursor: pointer;
   z-index: 99;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 
 .copyright a {
