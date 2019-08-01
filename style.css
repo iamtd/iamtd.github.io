@@ -142,12 +142,17 @@ span.type::after {
 
 .menu-icon {
   position: fixed;
-  top: 5px;
-  right: 0px;
+  top: 0;
+  right: 5px;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 26px;
   color: rgb(110, 110, 110);
-  z-index: 999;
+  /* z-index: 999; */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-icon {
 }
 
 .menu-icon:active {

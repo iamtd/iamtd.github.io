@@ -2,14 +2,15 @@
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
   document.getElementById('text').style.display = 'none';
-  document.getElementById('copyright').innerHTML = '<a href="https://www.facebook.com/dinhtu.dt">iamtd, 2019</a>';
+  document.getElementById('copyright').classList.remove('d-none');
+  console.log('clicked')
 }
 
 function closeNav() {
     // document.querySelector('.settings-icons').style.opacity = '0';
     document.getElementById("myNav").style.width = "0%";
     document.getElementById('text').style.display = 'block';
-    document.getElementById('copyright').innerHTML = '';   
+    document.getElementById('copyright').classList.add('d-none');  
 }
 
 
@@ -340,6 +341,7 @@ function init() {
         }
     }
 
+    document.getElementById('menu-icon').addEventListener('click', openNav);
 
     document.getElementById('btn-rain').addEventListener('click', () => {
         document.getElementById('btn-rain').classList.toggle('settings-icons--off');
