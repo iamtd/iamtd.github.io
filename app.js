@@ -1,368 +1,199 @@
-// NAVBAR
-window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-});
-
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-  document.getElementById('text').style.display = 'none';
-  document.getElementById('copyright').classList.remove('d-none');
-  console.log('clicked')
-}
-
-function closeNav() {
-    // document.querySelector('.settings-icons').style.opacity = '0';
-    document.getElementById("myNav").style.width = "0%";
-    document.getElementById('text').style.display = 'block';
-    document.getElementById('copyright').classList.add('d-none');  
-}
-
-
-
-
-// MUSIC
-function init() {
-  var audio, playlist;
-  
-  playlist = [
+const songs = [
     {
-      name: 'When the love falls',
-      url: 'music/WhenTheLoveFalls-Yiruma.mp3',
-      artist: 'Yiruma',
-      bg: 'images/tinhtrecon.jpg',
-      note: 'Cho những tháng năm thương nhớ người...'
+        name: 'When the love falls',
+        url: 'songs/WhenTheLoveFalls-Yiruma.mp3',
+        artist: 'Yiruma'
     },
     {
         name: 'Snow Flower',
-        url: 'music/SnowFlower-KimYoon.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/emhonnhien.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/SnowFlower-KimYoon.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Love',
-        url: 'music/Love-WangWei.mp3',
-        artist: 'Wang Wei',
-        bg: 'images/binhyenlaxanh.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/Love-WangWei.mp3',
+        artist: 'Wang Wei'
     },
     {
         name: 'Remember',
-        url: 'music/Remember-KimYoon.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/cunvaem.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/Remember-KimYoon.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Bài hát viết cho em',
-        url: 'music/BaiHatVietChoEm-PhamHoaiNam.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/hua.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/BaiHatVietChoEm-PhamHoaiNam.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Chỉ còn những mùa nhớ',
-        url: 'music/ChiConNhungMuaNho-BaoTram.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/lavang.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/ChiConNhungMuaNho-BaoTram.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Chuyện của ta',
-        url: 'music/ChuyenCuaTa-GleeGiaThieu.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/4.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/ChuyenCuaTa-GleeGiaThieu.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Còn tuổi nào cho em',
-        url: 'music/ConTuoiNaoChoEm-MiuLe.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/cunvaem.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/ConTuoiNaoChoEm-MiuLe.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Đánh rơi bên hồ',
-        url: 'music/DanhRoiBenHo-ThuyChi.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/2.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/DanhRoiBenHo-ThuyChi.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Nhớ mang em về',
-        url: 'music/NhoMangEmVe-Hy.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/cunvaem.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/NhoMangEmVe-Hy.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Sài gòn vẫn thế',
-        url: 'music/SaiGonVanThe-PhamHoaiNam.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/gocsachnangvang.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/SaiGonVanThe-PhamHoaiNam.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Dream Catcher',
-        url: 'music/DreamCatcher-XiaoPing.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/5.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/DreamCatcher-XiaoPing.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Em vẫn như ngày xưa',
-        url: 'music/EmVanNhuNgayXua-ThaiTrinh.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/xam.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/EmVanNhuNgayXua-ThaiTrinh.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Giấc mơ nhẹ nhàng',
-        url: 'music/GiacMoNheNhang-ThuyChiFtMinhVuong.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/cunvaem.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/GiacMoNheNhang-ThuyChiFtMinhVuong.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Dona, Dona',
-        url: 'music/JoanBaez-DonnaDonna.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/ngungoan.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
-    },
-    {
-        name: 'Lớn rồi còn khóc nhè',
-        url: 'music/LonRoiConKhocNhe-TrucNhan.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/cunvaem.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/JoanBaez-DonnaDonna.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Mong manh tình về',
-        url: 'music/MongManhTinhVe-ThuyChi.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/cunvaem.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/MongManhTinhVe-ThuyChi.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Morning Please Don\'t Come',
-        url: 'music/MorningPleaseDontCome-WangWei.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/1.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
-    },
-    {
-        name: 'Remember',
-        url: 'music/Remember-KimYoon.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/cunvaem.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/MorningPleaseDontCome-WangWei.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Mùa hoa bỏ lại',
-        url: 'music/MuaHoaBoLai-PhamHoaiNam.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/4.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/MuaHoaBoLai-PhamHoaiNam.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Muộn màng là từ lúc',
-        url: 'music/MuonMangLaTuLuc-NguyenHa.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/1.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/MuonMangLaTuLuc-NguyenHa.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Ta có hẹn với tháng 5',
-        url: 'music/TaCoHenVoiThang5-Nguyen Ha.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/cunvaem.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/TaCoHenVoiThang5-NguyenHa.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Tháng mười một',
-        url: 'music/ThangMuoiMot-Hy.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/binhyenlaxanh.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/ThangMuoiMot-Hy.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Tinh cầu cô đơn',
-        url: 'music/TinhCauCoDon-PhamHoaiNam.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/1.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/TinhCauCoDon-PhamHoaiNam.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Tình đầu',
-        url: 'music/TinhDau-NguyenHa.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/tinhtrecon.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/TinhDau-NguyenHa.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Vừa biết dấu yêu',
-        url: 'music/VuaBietDauYeu-ThanhTrangNguyen.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/binhyenlaxanh.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/VuaBietDauYeu-ThanhTrangNguyen.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Want to be a Pisces',
-        url: 'music/WantToBeAPisces-JinShi.mp3',
-        artist: 'Kim Yoon',
-        bg: 'images/honnhien.jpg',
-        note: 'Cho những tháng năm thương nhớ người...'
+        url: 'songs/WantToBeAPisces-JinShi.mp3',
+        artist: 'Kim Yoon'
     },
     {
         name: 'Lạc Nhau Có Phải Muôn Đời',
         url: 'songs/LacNhauCoPhaiMuonDoi-TrietPham.mp3',
-        note: 'Cho những tháng năm thương nhớ người...'
-    }  
-  ];
-
-
-  var options = {
-    strings: ["neighbor", "family", "team", "community"],
-    stringsElement: null,
-    // typing speed
-    typeSpeed: 70,
-    // time before typing starts
-    startDelay: 700,
-    // backspacing speed
-    backSpeed: 70,
-    // time before backspacing
-    backDelay: 700,
-    // loop
-    loop: true,
-    // false = infinite
-    loopCount: Infinity,
-    // show cursor
-    showCursor: false,
-    // character for cursor
-    cursorChar: "|",
-    // attribute to type (null == text)
-    attr: null,
-    // either html or text
-    contentType: 'html'
-  }
-  
-
-  var typed = new Typed(".type", options);
-
-  
-  
-  audio = new Audio();
-  var newSong = getRandomSong();
-
-  audio.src = newSong.url;
-
-  // document.getElementById('title').innerHTML = `<i class="fas fa-headphones-alt"></i>${newSong.name}`;
-  // document.getElementById('note').innerHTML = newSong.note;
-  
-
-  var playPromise = audio.play();
-
-  if (playPromise !== undefined) {
-    playPromise.then(_ => {
-      // Automatic playback started!
-      // Show playing UI.
-    })
-    .catch(error => {
-      // Auto-play was prevented
-      // Show paused UI.
-      document.querySelector('.btn-play').classList.remove('d-none');
-      document.getElementById('btn-play').addEventListener("click", function() {
-        console.log('clicked');
-        switchTrack();
-        document.querySelector('.btn-play').classList.add('d-none');
-      });
-    });
-  }
-  
-  function getRandomNumber() {
-      return Math.floor(Math.random() * playlist.length);
-  }
-
-  function getRandomSong() {
-      var randNumber = getRandomNumber();
-      return playlist[randNumber];
-  }
-
-  function switchTrack() {
-      var randNumber = getRandomNumber();        
-      var curSong = audio.src;
-
-      var newSong = playlist[randNumber];
-
-      if (newSong.url === curSong) {
-          randNumber++;
-          if (randNumber >= playlist.length) {
-              newSong = playlist[0];
-          } else {
-              newSong = playlist[randNumber];
-          }
-      }
-
-
-      audio.src = newSong.url;
-      // document.getElementById('title').innerHTML = `<i class="fas fa-headphones-alt" id="music"></i>${newSong.name}`;
-      // document.getElementById('note').innerHTML = newSong.note;
-      audio.play();
-
-  }   
-  
-  audio.addEventListener('ended', function() {
-      switchTrack();
-  });
-
-  // document.getElementById('title').addEventListener("click", function() {
-  //     switchTrack();
-  // });
-
-
-  // SHAKE
-  var shakeEvent = new Shake({ threshold: 10 });
-  
-  function shake() {
-      shakeEvent.start();
-      window.addEventListener('shake', function() {
-          switchTrack();
-      }, false);
-  }
-  shake();
-
-    const btnRain = document.getElementById('btn-rain');
-    btnRain.addEventListener('click', rainPlay);
-
-    function rainPlay() {
-        var rain = document.getElementById('1');
-        console.log(rain.paused);
-        if (!rain.paused) {
-            rain.pause();
-        } else {
-            rain.play();
-        }
+        artist: 'Kim Yoon'
+    },
+    {
+        name: 'Bảy bước tới mùa hè',
+        url: 'songs/BayBuocToiMuaHe-DaoLiuLoo.mp3',
+        artist: 'Kim Yoon'
+    },
+    {
+        name: 'Ngày Hạ',
+        url: 'songs/NgayHa-DiLixKBee.mp3',
+        artist: 'Kim Yoon'
     }
+];
 
-    document.getElementById('menu-icon').addEventListener('click', openNav);
 
-    document.getElementById('btn-rain').addEventListener('click', () => {
-        document.getElementById('btn-rain').classList.toggle('settings-icons--off');
-        rainPlay;
-    });
-    document.getElementById('btn-music').addEventListener('click', () => {       
-        document.getElementById('btn-music').classList.toggle('settings-icons--off');
-        if (!audio.paused) {
-            audio.pause();
-        } else {
-            audio.play();
-        }
-    });
-    document.getElementById('btn-next').addEventListener('click', switchTrack);
+// INIT PLAYLIST
+let newSongs = [...songs];
+const shuffleSongs = () => newSongs = songs.sort(() => Math.random() - 0.5);
+
+
+// INIT AUDIO
+shuffleSongs();
+let index = 0;
+const audio = new Audio(newSongs[index].url);
+audio.play();
+
+
+// NEXT SONG
+const btnNext = document.getElementById('btn-next');
+
+const nextSong = () => {
+    if (index >= (songs.length - 1)) {
+        shuffleSongs();
+        index = 0;
+    } else {
+        index++;
+    }
+    audio.src = newSongs[index].url;
+    audio.play();
+    btnMusic.classList.remove('option-icons--off');
 }
 
+btnNext.addEventListener('click', nextSong);
+audio.addEventListener('ended', function () {
+    nextSong();
+});
 
 
-init();
+// PAUSE, PLAY
+const btnMusic = document.getElementById('btn-music');
 
+const pause = () => {
+    !audio.paused ? audio.pause() : audio.play();
+    btnMusic.classList.toggle('option-icons--off');
+}
+btnMusic.addEventListener('click', pause);
+
+
+// RAIN SOUND
+const btnRain = document.getElementById('btn-rain');
+
+const playRainSound = () => {
+    var rain = document.getElementById('rain-audio');
+    rain.paused ? rain.play() : rain.pause();
+    btnRain.classList.toggle('option-icons--off');
+}
+btnRain.addEventListener('click', playRainSound);
+
+// MENU
+const btnMenu = document.getElementById('btn-menu');
