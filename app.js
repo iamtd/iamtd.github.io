@@ -201,22 +201,30 @@ const btnMenu = document.getElementById('btn-menu');
 
 var playPromise = audio.play();
 
+// In browsers that don’t yet support this functionality,
+// playPromise won’t be defined.
 if (playPromise !== undefined) {
-    playPromise.then(_ => {
+    playPromise.then(function () {
         // Automatic playback started!
-        // Show playing UI.
-    })
-        .catch(error => {
-            // Auto-play was prevented
-            // Show paused UI.
-            const btnStart = document.getElementById('btn-play');
-            const overlay = document.querySelector('.start-overlay');
+    }).catch(function (error) {
+        // Automatic playback failed.
+        // Show a UI element to let the user manually start playback.
+        showOverlay();
+    });
+}
 
-            overlay.classList.remove('d-none');
-            btnStart.addEventListener("click", function () {
-                console.log('Clicked');
-                audio.play();
-                overlay.classList.add('d-none');
-            });
-        });
+const overlay = document.querySelector('.overlay');
+const bottomMenu = document.querySelector('.bottom-menu');
+const settings = document.querySelector('.settings');
+
+const showOverlay = () => {
+    overlay.classList.remove('d-none');
+    bottomMenu.classList.add('d-none');
+    settings.classList.add('d-none');
+}
+
+const hideOverlay = () => {
+    overlay.classList.add('d-none');
+    bottomMenu.classList.remove('d-none');
+    settings.classList.remove('d-none');
 }
