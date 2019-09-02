@@ -210,7 +210,7 @@ if (playPromise !== undefined) {
             // Auto-play was prevented
             // Show paused UI.
             const btnStart = document.getElementById('btn-play');
-            const overlay = document.querySelector('.start-ovelay');
+            const overlay = document.querySelector('.start-overlay');
 
             overlay.classList.remove('d-none');
             btnStart.addEventListener("click", function () {
