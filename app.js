@@ -227,5 +227,5 @@ const hideOverlay = () => {
     overlay.classList.add('d-none');
     bottomMenu.classList.remove('d-none');
     settings.classList.remove('d-none');
-    audio.play();
+    nextSong();
 }
