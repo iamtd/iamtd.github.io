@@ -151,7 +151,7 @@ const shuffleSongs = () => newSongs = songs.sort(() => Math.random() - 0.5);
 shuffleSongs();
 let index = 0;
 const audio = new Audio(newSongs[index].url);
-audio.play();
+
 
 
 // NEXT SONG
@@ -197,3 +197,26 @@ btnRain.addEventListener('click', playRainSound);
 
 // MENU
 const btnMenu = document.getElementById('btn-menu');
+
+
+var playPromise = audio.play();
+
+if (playPromise !== undefined) {
+    playPromise.then(_ => {
+        // Automatic playback started!
+        // Show playing UI.
+    })
+        .catch(error => {
+            // Auto-play was prevented
+            // Show paused UI.
+            const btnStart = document.getElementById('btn-play');
+            const overlay = document.querySelector('.start-ovelay');
+
+            overlay.classList.remove('d-none');
+            btnStart.addEventListener("click", function () {
+                console.log('Clicked');
+                audio.play();
+                overlay.classList.add('d-none');
+            });
+        });
+}
